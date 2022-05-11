@@ -4,7 +4,7 @@ import {
   createGoal,
   updateGoal,
   deleteGoal,
-} from "../controllers/goalController.js";
+} from "../controllers/goalControllers.js";
 
 const router = express.Router();
 
