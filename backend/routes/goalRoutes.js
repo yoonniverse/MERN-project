@@ -5,10 +5,11 @@ import {
   updateGoal,
   deleteGoal,
 } from "../controllers/goalControllers.js";
+import { protect } from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
-router.route("/").get(readGoals).post(createGoal);
-router.route("/:id").patch(updateGoal).delete(deleteGoal);
+router.route("/").get(protect, readGoals).post(protect, createGoal);
+router.route("/:id").patch(protect, updateGoal).delete(protect, deleteGoal);
 
 export default router;
