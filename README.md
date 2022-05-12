@@ -1,6 +1,6 @@
 ## MERN project
 
-Simple project using Express(Node) + React + MongoDB.
+Simple project using Express(Node.js) + React + MongoDB.
 From https://youtube.com/playlist?list=PLillGF-RfqbbQeVSccR9PGKHzPJSWqcsm (https://github.com/bradtraversy/mern-tutorial), modified few things like
 
 - add edit functionality for the post
@@ -13,19 +13,28 @@ From https://youtube.com/playlist?list=PLillGF-RfqbbQeVSccR9PGKHzPJSWqcsm (https
 
 ### How to Reproduce
 
-1. create `.env` file.
 
+#### Development
+1. create `.env` file.
 ```
 NODE_ENV=development
 PORT=5000
 MONGO_URI=YOUR_MONGODBATLAS_URI
 JWT_SECRET=RANDOM_STRING
 ```
+2. `npm install`
+3. `npm install --prefix frontend`
+4. `npm run dev`
 
-1. `npm install`
-1. `npm install --prefix frontend`
-1. `npm run build --prefix frontend`
-1. `npm start`
+#### Production
+1. use heroku https://www.heroku.com/
+2. at project config vars, set
+```
+NODE_ENV=production
+MONGO_URI=YOUR_MONGODBATLAS_URI
+JWT_SECRET=YOUR_JWT_SECRET
+```
+```
 
 ### Notes
 
