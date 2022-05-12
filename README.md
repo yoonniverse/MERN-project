@@ -13,10 +13,19 @@ From https://youtube.com/playlist?list=PLillGF-RfqbbQeVSccR9PGKHzPJSWqcsm (https
 
 ### How to Reproduce
 
+1. create `.env` file.
+
+```
+NODE_ENV=development
+PORT=5000
+MONGO_URI=YOUR_MONGODBATLAS_URI
+JWT_SECRET=RANDOM_STRING
+```
+
 1. `npm install`
-2. `npm install --prefix frontend`
-3. `npm run build --prefix frontend`
-4. `npm start`
+1. `npm install --prefix frontend`
+1. `npm run build --prefix frontend`
+1. `npm start`
 
 ### Notes
 
